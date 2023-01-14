@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<form method="POST" class="m-auto w-2/4 md:w-2/6 h-2/4 md:h-3/6 rounded-lg border-2 flex flex-col gap-4 justify-center">
+    <label class="text-center"><strong>Enter a name to start Chat</strong></label>
+    <input type="text" class="py-2 w-1/2 mx-auto rounded-full text-center" id="name" name="name"/>
+    <button class="py-1 px-6 mx-auto rounded-full bg-indigo-500 hover:shadow-lg" id="login">Login</button>
+</form>
+
+{% endblock %}
+
+
+
+
+    <!-- <nav class="w-full md:px-2 px-4 py-2.5 bg-blue-500">
+      <div class="flex flex-wrap items-center justify-between mx-auto">
+        <a href="/">lChat</a>
+        <ul class="flex flex-col md:flex-row gap-5">
+          <li><a href="/">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="h-full w-full flex justify-center py-8 bg-blue-300">
+        <div class="h-full w-3/4 border-2 rounded-md border-sky-500">
+            <div>Chat</div>
+            <div>texts</div>
+            <div>texts</div>
+            <div class="fixed flex border-4">
+                <input type="text"/>
+                <div><button>Send</button></div>
+            </div>
+        </div>
+    </div>
+    <input id="name" type="text">
+    <button type="submit" id="connect">Connect</button>
+    <button type="submit" id="send">Send</button>
+    <p id="chat"></p>
+    
+    <script src="index.js"></script> -->
+    <!-- <script src="{{ url_for('static', filename='index.js') }}""></script> -->

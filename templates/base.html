@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+        <header class="navbar fixed inset-x-0 top-0 bg-indigo-500">
+            <div class="px-4 py-4 flex flex-wrap justify-between">
+                <div class="w-1/2 flex items-start">lChat</div>
+                <div class="w-1/2 flex justify-end"><a href="{{ url_for('logout') }}">Logout</a></div>
+            </div>
+        </header>
+
+        <section class="flex-1">
+            <div class="w-full h-screen flex justify-center bg-gray-300">
+                {% block content %}{% endblock %}
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
