@@ -39,6 +39,13 @@ socket.on('returndata', function(data){
 
 let send = document.getElementById("sendmsg");
 
+document.getElementById("message").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        send.click();        
+    }
+})
+
 if (send != null){
     send.onclick = function(){
         msg = document.getElementById("message")
